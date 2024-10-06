@@ -1,0 +1,441 @@
+/* General Reset */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+body {
+  background-color: #0D0D2B; /* Space background color */
+  color: #F0F0F0; /* Text color */
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.space-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1F1A48; /* Dark purple space background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.logo h1 {
+  font-size: 36px;
+  color: #F0F0F0; /* Light color for visibility */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.logo h1 span {
+  color: #FFD700;
+  font-style: italic;
+}
+
+/* Navigation Items */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links ul li {
+  margin-left: 30px;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 18px;
+  color: #F0F0F0; /* Default text color */
+  position: relative;
+  padding: 5px;
+  letter-spacing: 1.5px;
+}
+
+/* White underline effect when hovering */
+.nav-item:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffffff; /* White underline */
+  transition: width 0.4s ease;
+}
+
+.nav-item:hover:before {
+  width: 100%; /* Full underline on hover */
+}
+
+/* New Section Styling */
+.game-title-section {
+  position: relative;
+  width: 100%;
+  height: 450px; /* Adjusted height for modern look */
+  overflow: hidden;
+  background-color: #1B1B2F;
+}
+
+.space-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%) contrast(120%) saturate(130%); /* More vivid space photo */
+  animation: zoomIn 10s infinite alternate; /* Subtle zoom effect */
+}
+
+.game-title-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFD700; /* Yellow text color to match space theme */
+  text-align: center;
+  animation: fadeIn 3s ease; /* Smooth fade-in effect for the text */
+}
+
+.game-title {
+  font-size: 52px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-weight: bold;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Modern shadow effect */
+  animation: glow 2s ease-in-out infinite alternate; /* Glowing animation */
+}
+
+/* About Game Section */
+.about-game-section {
+  display: flex;
+  align-items: center;
+  padding: 20px; /* Reduced padding for less distance */
+  background: linear-gradient(to right, #1B1B2F, #3B3B58); /* Gradient background */
+  border-radius: 15px; /* Rounded corners for modern look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 10px; /* Reduced margin between text and image */
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px; /* Reduced space under heading */
+  color: #FFD700; /* Title color */
+  padding-left: 100px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  padding-left: 100px;
+}
+
+/* Button Styles */
+.explore-button {
+  background-color: #FFD700; /* Gold color for the button */
+  color: #1B1B2F; /* Dark background color for contrast */
+  border: none; /* Remove default border */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Padding around text */
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  margin-top: 20px; /* Space above the button */
+  display: inline-block; /* Aligning the button inline */
+  margin-left: 100px;
+}
+
+/* Button Hover Effect */
+.explore-button:hover {
+  background-color: #1B1B2F; /* Dark color on hover */
+  color: #FFD700; /* Gold color for text on hover */
+  transform: translateY(-2px); /* Slight upward movement */
+}
+
+/* Button Focus Effect */
+.explore-button:focus {
+  outline: none; /* Remove default outline */
+}
+
+/* Adjusted Image Size */
+.about-photo {
+  flex: 1;
+  display: flex; /* Centering the image vertically */
+  justify-content: center; /* Center the image */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.game-image {
+  width: 80%; /* Adjusted size to make it bigger */
+  max-width: 400px; /* Max width to limit size */
+  height: auto; /* Keep aspect ratio */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for the image */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Enlarging effect on hover */
+.about-photo:hover .game-image {
+  transform: scale(1.05); /* Scale up the image slightly */
+}
+
+/* Keyframes for Animations */
+@keyframes zoomIn {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 0 0 10px #FFD700;
+  }
+  to {
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 0 0 20px #FFD700, 0 0 30px #FFD700;
+  }
+}
+/* Member Section Styles */
+.member-section {
+  position: relative;
+  overflow: hidden; /* Hide overflow for scrolling effect */
+  background-color: #1B1B2F; /* Background color */
+  padding: 20px 0; /* Padding */
+  text-align: center; /* Center the text */
+}
+
+.member-container {
+  display: flex;
+  animation: scroll 30s linear infinite; /* Slowed down scrolling effect */
+}
+
+.member-box {
+  flex: 0 0 200px; /* Fixed width for each box */
+  margin: 0 15px; /* Space between boxes */
+  background-color: #3B3B58; /* Box background color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Padding inside the box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+.member-section h2 {
+  font-size: 36px; /* Adjust font size */
+  color: #FFD700; /* Gold color for the title */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), /* Soft glow */
+               0 0 20px rgba(255, 215, 0, 0.6), /* Medium glow */
+               0 0 30px rgba(255, 215, 0, 0.4); /* Strong glow */
+  animation: glow 1.5s infinite alternate; /* Animation for the glow effect */
+}
+
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
+                   0 0 20px rgba(255, 215, 0, 0.3),
+                   0 0 30px rgba(255, 215, 0, 0.1);
+  }
+  100% {
+      text-shadow: 0 0 20px rgba(255, 215, 0, 1),
+                   0 0 30px rgba(255, 215, 0, 0.8),
+                   0 0 40px rgba(255, 215, 0, 0.6);
+  }
+}
+
+
+
+.member-photo {
+  width: 100%; /* Full width of the container */
+  height: 0; /* Set height to 0 to maintain aspect ratio */
+  padding-bottom: 100%; /* This will create a square */
+  border-radius: 5px; /* Rounded corners for images */
+  overflow: hidden; /* Ensure any overflow is hidden */
+  position: relative; /* Set position relative for absolute positioning of the image */
+}
+
+.member-image {
+  position: absolute; /* Position absolute for the image */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Cover to maintain aspect ratio without distortion */
+  border-radius: 5px; /* Keep rounded corners */
+}
+
+/* Hover effect */
+.member-box:hover {
+  transform: scale(1.05); /* Slightly enlarge box on hover */
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Adjusted for smoother end */
+}
+
+.flags {
+  display: flex; /* Aligns flags in a row */
+  align-items: center; /* Centers flags vertically */
+}
+
+.flag-icon {
+  width: 30px; /* Set width of the flags */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 10px; /* Space between flags and the navigation */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: transform 0.3s; /* Add a hover effect */
+}
+
+.flag-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge flag on hover */
+}
+
+.view-more-container {
+  text-align: center; /* Center the button */
+  margin-top: 20px; /* Space above the button */
+}
+
+.view-more-button {
+  display: inline-block; /* Allow padding and margin */
+  padding: 15px 30px; /* Size of the button */
+  background-color: #FFD700; /* Yellow background */
+  color: #1F1A48; /* Dark text color */
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-decoration: none; /* Remove underline */
+  border-radius: 25px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.view-more-button:hover {
+  background-color: #FFC107; /* Darker yellow on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed; /* Cover the entire screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+  display: flex; /* Center the content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 9999; /* High z-index to overlay other content */
+}
+
+.loading-content {
+  text-align: center; /* Center text */
+}
+
+.loading-text {
+  font-size: 60px; /* Large text size */
+  color: #FFD700; /* Golden color for text */
+  letter-spacing: 10px; /* Spacing between letters */
+}
+
+/* Individual Letter Animation */
+.loading-text span {
+  display: inline-block; /* Allow individual animation */
+  animation: wave 1s ease-in-out infinite; /* Waving animation */
+}
+
+/* Keyframes for Waving Animation */
+@keyframes wave {
+  0%, 100% {
+      transform: translateY(0); /* Start at original position */
+  }
+  25% {
+      transform: translateY(-15px); /* Move up */
+  }
+  50% {
+      transform: translateY(0); /* Back to original position */
+  }
+  75% {
+      transform: translateY(15px); /* Move down */
+  }
+}
+
+/* Apply different delay to each letter */
+.loading-text span:nth-child(1) { animation-delay: 0s; }
+.loading-text span:nth-child(2) { animation-delay: 0.1s; }
+.loading-text span:nth-child(3) { animation-delay: 0.2s; }
+.loading-text span:nth-child(4) { animation-delay: 0.3s; }
+.loading-text span:nth-child(5) { animation-delay: 0.4s; }
+.loading-text span:nth-child(6) { animation-delay: 0.5s; }
+.loading-text span:nth-child(7) { animation-delay: 0.6s; }
+
+/* Main Content */
+.main-content {
+  opacity: 0; /* Start hidden */
+  transition: opacity 1s ease; /* Transition for fade-in effect */
+  /* Other styling for main content */
+}
+
+/* Show main content */
+.show {
+  opacity: 1; /* Fully visible */
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+  display: flex; /* Center the content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 9999; /* High z-index to overlay other content */
+}
+
+
+
+
+
+.footer {
+  background-color: #1F1A48; /* Dark purple background */
+  color: #F0F0F0; /* Light text color */
+  text-align: center; /* Center text */
+  padding: 20px 0; /* Top and bottom padding */
+  position: relative; /* Allow positioning of child elements */
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow above */
+}
+
+.footer-content {
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center align the footer content */
+  padding: 0 20px; /* Side padding */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 16px; /* Font size */
+  letter-spacing: 1px; /* Slight letter spacing */
+}

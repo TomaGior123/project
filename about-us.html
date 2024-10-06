@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back To Earth: About Us</title>
+    <link rel="stylesheet" href="about-us.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Strike&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="loading-screen" id="loading">
+        <div class="loading-content">
+            <h1 class="loading-text">
+                <span>L</span>
+                <span>O</span>
+                <span>A</span>
+                <span>D</span>
+                <span>I</span>
+                <span>N</span>
+                <span>G</span>
+            </h1>
+        </div>
+    </div>
+
+    <div class="space-header">
+        <div class="logo">
+            <h1>BACK TO <span>EARTH</span></h1>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="about-game.html" class="nav-item">About Game</a></li>
+                <li><a href="about-us.html" class="nav-item">About Us</a></li>
+                <li class="flags">
+                    <a href="index.html"><img src="img/flagus.png" alt="Language 1" class="flag-icon" /></a>
+                    <img src="img/images.png" alt="Language 2" class="flag-icon" />
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="title">About Us</h1>
+        <p class="text">Our group- NEXUS A-6(NASA Exploration for Unique Solutions A-6) aims at developing a gripping, strategic and bonding game, designed to resolve the issue of playing games in a microgravity environment.</p>
+    </div>
+
+    <div class="mission-container">
+        <h2 class="sub-title">Our Mission</h2>
+        <p class="text">We aim to create unforgettable memories through engaging gameplay that fosters learning and collaboration. Our goal is to bring people together, transcending boundaries and distances, while having fun in an extraordinary environment.</p>
+    </div>
+
+    <div class="values-container">
+        <h2 class="sub-title">Our Values</h2>
+        <ul class="values-list">
+            <li>Inclusivity: We believe in providing an inclusive experience for everyone.</li>
+            <li>Innovation: We strive for innovation in gameplay and design.</li>
+            <li>Quality: Our commitment is to provide a high-quality gaming experience.</li>
+            <li>Community: Building a strong community of players is at the heart of what we do.</li>
+        </ul>
+    </div>
+
+    <img src="img/photo.jpeg" alt="Space Background" class="space-image">
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Back To Earth. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const loadingScreen = document.getElementById('loading');
+            const mainContent = document.getElementById('main-content');
+            
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0'; // Fade out loading screen
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none'; // Remove from view after fade-out
+                    mainContent.classList.add('show'); // Add class to show main content
+                }, 1000); // Wait for fade-out to complete
+            }, 4000); // Keep loading screen for 4 seconds
+        };
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

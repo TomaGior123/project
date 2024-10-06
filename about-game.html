@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back To Earth: About Game</title>
+    <link rel="stylesheet" href="about-game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Strike&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="loading-screen" id="loading">
+        <div class="loading-content">
+            <h1 class="loading-text">
+                <span>L</span>
+                <span>O</span>
+                <span>A</span>
+                <span>D</span>
+                <span>I</span>
+                <span>N</span>
+                <span>G</span>
+            </h1>
+        </div>
+    </div>
+    
+
+    <div class="space-header">
+        <div class="logo">
+            <h1>BACK TO <span>EARTH</span></h1>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="about-game.html" class="nav-item">About Game</a></li>
+                <li><a href="about-us.html" class="nav-item">About Us</a></li>
+                     <!-- New About Us link -->
+                   <li> <a href="index.html"><img src="img/flagus.png" alt="Language 1" class="flag-icon" /></a>
+                    <img src="img/images.png" alt="Language 2" class="flag-icon" />
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="title"> Back To Earth</h1>
+        <p class="text">“Back to Earth” offers a unique experience for players of any age, anywhere, including space.<br> It fosters skills such as teamwork, communication, and promotes one’s critical thinking.<br> It is suited even for microgravity environments; <br>its compact and lightweight design makes it easy to handle and transport, allowing players to enjoy immersive gameplay no matter where they are in the cosmos.</p>
+    </div>
+    <div class="containerII">
+    <h2 class="title">RULES</h2>
+    <p class="text">• The general aim of this game is to fly back to the Earth.<br>
+        • In order to build the rocket, a player needs to collect a certain amount of resources, such as Metal, Oxygen, and Water.<br>
+        • Begin by spinning the spinner, then move your figure forward the number of spaces indicated.<br>
+        • On whatever it lands on, you have to complete.<br>
+        • The player that collects the required amount of resources to build the rocket wins.<br>
+    </p>
+    <br>
+</div>
+
+     <img src="img/space.jpg" alt="img" class="space-image">
+
+
+
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Back To Earth. All rights reserved.</p>
+           
+        </div>
+    </footer>
+    
+
+ 
+    <script>
+        window.onload = function() {
+            const loadingScreen = document.getElementById('loading');
+            const mainContent = document.getElementById('main-content');
+            
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0'; // Fade out loading screen
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none'; // Remove from view after fade-out
+                    mainContent.classList.add('show'); // Add class to show main content
+                }, 1000); // Wait for fade-out to complete
+            }, 4000); // Keep loading screen for 4 seconds
+        };
+    </script>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>
